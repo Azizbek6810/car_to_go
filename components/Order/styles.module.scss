@@ -1,0 +1,146 @@
+.SearchContainer {
+    position: relative;
+    background: rgb(34 31 31 / 97%);
+    // background-image: linear-gradient( #fff 50% ,   rgba(26, 26, 26, 0.96) 100% );
+    width: 100%;
+    box-sizing: border-box;
+    padding: 170px 10px 170px 10px;
+    z-index: 2;  
+    .inputCity {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      background-color: #f39313;
+      border-radius: 10px;
+      padding: 10px 0;
+      margin: 10px 0;
+  
+      img {
+        width: 20%;
+      }
+  
+      input {
+        width: 100%;
+        border: none;
+        background-color: #f39313;
+        color: var(--black);
+        padding: 0 20px;
+
+        &::-webkit-calendar-picker-indicator{
+            color: var(--black);
+            // background-color: var(--black);
+            padding: 5px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+      }
+  
+      @media (min-width: 1200px) {
+        width: 45%;
+  
+        input {
+          &::placeholder {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .dataNow::before{
+        content: "Rent";
+    }
+    .dataEnd::before{
+        content: "Return";
+    }
+    .dataNow , .dataEnd{
+        &:hover::before{
+            display: block;
+        }
+    }
+    .dataNow::before , .dataEnd::before{
+        display: none;
+        position: absolute;
+        top: -25px;
+        left: 40%;
+        margin: 0 auto;
+        font-size: var(--size14);
+        background-color: transparent;
+        color: var(--cl-black);
+        z-index: 5;
+    }
+    .inputRow{
+        justify-content: space-between;
+        .inputCity{
+            width: 20%;
+        }
+    }
+    .btnSearch {
+      margin: 30px auto 0 auto;
+      background: #f39313;
+      border-radius: 39px;
+      padding: 15px 80px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      color: #292929;
+      border: none;
+      transition: all 0.2s linear;
+  
+      &:hover {
+        box-shadow: 0 0 10px var(--cl-blue);
+      }
+      &:active{
+        transform: scale(0.9);
+      }
+    }
+    
+    .selectALl {
+        width: 100%;
+        height: 100%;
+
+     &> select{
+        height: 100%;
+        width: 100%;
+        padding: 10px 20px;
+        line-height: 22px;
+        font-size: 16px;
+        border: 0;
+        border-radius: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #f39313;
+        color: var(--black);
+    }
+
+}
+    .location , .car{
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-8px, -50%);
+        z-index: 4;
+        background-image: url(../../public/assets/images/svg/locationBlack.svg);
+        background-size: 100% 100%;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .car{
+      &::before{
+        background-image: url(../../public/assets/images/svg/carBlack.svg);
+      }
+    }
+   
+  }
+.min{
+   padding: 15px 0 50px 0;
+}  

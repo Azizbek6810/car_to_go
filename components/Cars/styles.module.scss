@@ -1,0 +1,50 @@
+.globalImg{
+    width: 100%;
+    position: relative;
+    .carImg{
+        width: 100%;
+    }
+    .anim1{
+        animation-name: anim1;
+    }
+    .anim2{
+        animation-name: anim2;
+    }
+    .imgcontent{
+            animation-duration: 1.3s;
+            animation-timing-function: ease-in;
+            width: 9.45vw;
+            height: 9.45vw;
+            position: absolute;
+            bottom: 7.2%;
+            border-radius: 50%;
+            overflow: hidden;
+        .diskImg1{
+            position: relative;
+            top: -2%;
+            left: -2%;
+            width: 104%;
+            height: 104%;
+        }
+    }
+    .imgleft{
+        left: 12.4%;
+    }
+    .imgright{
+        right: 14.9% !important;
+    }
+    
+    
+}
+
+@keyframes anim1 {
+    
+    100%{
+        transform: rotate(-330deg);
+    }
+}
+@keyframes anim2 {
+    100%{
+        transform: rotate(330deg);
+    }
+}
