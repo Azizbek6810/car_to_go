@@ -1,27 +1,16 @@
+@use "../../styles/globalStill" as *;
 .rounContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 0;
-    position: absolute;
-    right: 60px;
-    top: 50%;
-    box-shadow: 1px 0 20px rgb(0 0 0 / 30%);
-    z-index: 8;
+    @include rounContentAll;
     &::before{
-        font-family: icomoon;
-        font-size: 20px;
-        font-weight: 700;
-        content: ">";
-        color: #000;
+        content: "";
+        width: 1vw;
+        height: 1vw;
+        background-image: url(../../public/assets/images/svg/next.svg);
+        background-size: 100% 100%;
         }
-    &:hover{
-        z-index: 100 !important;
-        background-color: #fff !important;
-
+        @media (max-width: 992px) {
+    .moledSlick{
+            display: block;
+        }
     }
 }

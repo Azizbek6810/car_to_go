@@ -12,7 +12,7 @@
     }
     .imgcontent{
             animation-duration: 1.3s;
-            animation-timing-function: ease-in;
+            animation-timing-function: ease-in-out;
             width: 9.45vw;
             height: 9.45vw;
             position: absolute;
@@ -27,6 +27,7 @@
             height: 104%;
         }
     }
+    
     .imgleft{
         left: 12.4%;
     }
@@ -36,15 +37,66 @@
     
     
 }
+.Kaptiva{
+    .imgcontent{
+        bottom: 6%;
+    }
+    .imgleft{
+        left: 14.6%;
+    }
+    .imgright{
+        right: 15.2% !important;
+    }
+}
+.Scoda{
+    
+}
+.Xiaopeng{
+    .imgcontent{
+     bottom: 11.8%;  
+     width: 9.85vw;
+     height: 9.85vw; 
+    }
+    .imgleft{
+        left: 16.3%;
+    }
+    .imgright{
+        right: 15.1% !important;
+    }
+}
+.Malibu{
+    .imgcontent{
+        bottom: 9.7%;
+    }
+    .imgleft{
+        left: 12.1%;
+    }
+    .imgright{
+        bottom: 8.3%;
+        right: 16.5% !important;
+    }
+}
+.Kia{
+    .imgcontent{
+        bottom: 7%;
+    }
+    .imgleft{
+    left: 11.7%;
+}
+.imgright{
+    right: 15.7% !important;
+}
+    
+}
 
 @keyframes anim1 {
     
     100%{
-        transform: rotate(-330deg);
+        transform: rotate(-360deg);
     }
 }
 @keyframes anim2 {
     100%{
-        transform: rotate(330deg);
+        transform: rotate(360deg);
     }
 }

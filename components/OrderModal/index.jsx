@@ -7,7 +7,7 @@ import styles from "./styles.module.scss"
 export default function OrderModal(){
     const state = useSelector((state) => state)
     const data ={
-        onModal: state.home.onModal
+        onModal: state.home.onModal,
     }
     const dispatch = useDispatch();
     return(

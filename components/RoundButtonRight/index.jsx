@@ -12,13 +12,12 @@ export default function RoundButtonRight(props) {
     },[1400])
   }
   return (
-    <div className={ className + " " +  styles.rounContent} 
+    <div className={ className + " " +  styles.rounContent + " palalla "  + `${props.moledSlick ? styles.moledSlickright : ""}` }  
     onClick={()=>{
       onClick();
-      actionToMolad({type: UPDATE_STATE , data: {animName: "anim2"}})
+      props.moledSlick? 
+      actionToMolad({type: UPDATE_STATE , data: {animName: "anim2"}}): ""
     }}>
-
-    
     </div>
   )
 }

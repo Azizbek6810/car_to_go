@@ -1,5 +1,5 @@
 .headerCarousel{
-    height: 100%;
+    height: 100vh;
     .slick-dots{
         width: fit-content;
         bottom: 25px;
@@ -46,6 +46,10 @@
                     color: transparent;
                 }
             }
+        }
+        @media (max-width: 576px) {
+          right: 50%;
+          transform: translate( 50% , 0);  
         }
     }
     .slick-slide{

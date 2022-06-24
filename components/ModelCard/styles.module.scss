@@ -1,0 +1,62 @@
+
+
+.modelCard{
+    margin: 0 3px 3px 0;
+    height: 21vw;
+    width: calc(var(--col-4) - 3px);
+    min-height: 252px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 3s linear;
+    .title{
+        position: absolute;
+        max-width: calc(50% - 30px);
+        color: #333;
+        top: 15%;
+        left: 10%;
+        z-index: 2;
+    }
+    .medium{
+        width: 60%;
+        font-size: 14px;
+        line-height: 1.2;
+        opacity: 0.00962752;
+        text-transform: uppercase;
+        color: #333;
+        padding-bottom: 6px;
+        
+    }
+    .img1{
+        position: absolute;
+        width: 75%;
+        height: 70%;
+        bottom: 0;
+        opacity: 1;
+        right: 0;
+        margin-right: 7px;
+        margin-bottom: 7px;
+        transition: all 0.3s linear;
+    }
+    .imghover{
+        bottom: 20%;
+        opacity: 1;
+        width: 50%;
+        height: 70%;
+    }
+    &:hover{
+        .img1 {
+            opacity: 0;
+        }
+        .imghover{
+            display: block;
+            opacity: 1;
+        }
+        .medium{
+            opacity: 1;
+        }
+
+    }
+}

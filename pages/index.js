@@ -6,19 +6,11 @@ import Models from '../components/ModelsCarousel'
 import Navbar from '../components/Navbar'
 import Ordered from '../components/Order'
 import Vedio from '../components/Vedio'
-import styles from '../styles/Home.module.css'
-import Aos from 'aos'
+import styles from '../styles/Home.module.scss'
 import OrderModal from '../components/OrderModal'
 import Services from '../components/Services'
 export default function Home() {
-  useEffect(()=>{
-    Aos.init({
-      offset: 200,
-      duration: 600,
-      easing: 'ease-in-sine',
-      delay: 100,
-    })
-  })
+  
   return (
     <div className={styles.home}>
        <Navbar/>
@@ -36,6 +28,7 @@ export default function Home() {
         </h1>
         <button className={styles.titlebtn}>
           DISCOVER MORE
+          <p>{">"}</p>
         </button>
        </div>
        <Services index = "0" />

@@ -22,15 +22,12 @@ export default function Header() {
     <div className={styles.headerContent }>
       <Slider className={styles.carouselHeader + " headerCarousel"} {...settings}>
           <div className={styles.cardHeader}>
-            <img src="./assets/images/svg/headerImg1.webp" className="Img" alt="" />
+            <img src="./assets/images/svg/headerImg1.webp"  className="Img" alt="" />
           </div>
           <div className={styles.cardHeader}>
             <img src="./assets/images/svg/headerImg2.webp" alt="" />
           </div>
           <div className={styles.cardHeader}>
-          {/* <video class="videoItem w-100 " alt="video" onloadedmetadata="this.muted = true" muted="" preload="none" loop="" playsinline="true" autoplay="true">
-                        <source src="./assets/video/fuoriserie-loop-1.mp4" type="video/mp4"/>
-          </video> */}
              <img src="./assets/images/svg/headerImg3.webp" alt="" />
           </div>
           <div className={styles.cardHeader}>
@@ -42,7 +39,6 @@ export default function Header() {
           <div className={styles.cardHeader}>
             <img src="./assets/images/svg/headerImg2.webp" alt="" />
           </div>
-          
         </Slider>
     </div>
   )

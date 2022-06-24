@@ -18,7 +18,6 @@ export default function Models() {
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed:  "1400",
 }
   const settings2 = {
     dots: true,
@@ -26,13 +25,15 @@ export default function Models() {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1400,
-    nextArrow: <RoundButtonRight OnNext />,
-    prevArrow: <RoundButtonLeft OnPrev />,
+    nextArrow: <RoundButtonRight moledSlick />,
+    prevArrow: <RoundButtonLeft moledSlick />,
   };
   const state = useSelector((state) => state);
   const data = {
     anim: state.home.animName,
-    onModal: state.home.onModal
+    onModal: state.home.onModal,
+    models: state.home.modelsPlay,
+
 }
 const dipastch = useDispatch();
 
@@ -81,12 +82,6 @@ const dipastch = useDispatch();
             </div>
             <h3>Flippen</h3>
           </div>
-          <div className={styles.modeltop + " navbarModel"}>
-            <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/MC20_CIELO_BG.jpg?$1400x2000$&fit=constrain" className="Img" alt="" />
-            </div>
-            <h3>Tesla</h3>
-          </div>
           
       </Slider>
       <div className={styles.SliderBottom}>
@@ -95,58 +90,37 @@ const dipastch = useDispatch();
             asNavFor={nav2}
             ref={slider => setNav1(slider)}
             swipeToSlide={true}
-            className={styles.carouselHeader + "Modal" } 
+            className={styles.carouselHeader + " Modal" } 
             {...settings2}
             >
-            <div  className={styles.cardHeader + " " }>
-              
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
-            <div className={styles.cardHeader}>
+              {
+                data.models.map((value)=>{
+                    return(
+                      <div  key={value.id} className={styles.cardHeader }>
+                        <div className={styles.models}>
+                           <Scoda value = {value}  anim = {data.anim}/>
+                        </div>
+                      </div>
+                    )
+                })
+              }
             
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
-            <div className={styles.cardHeader}>
-            
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
-            <div className={styles.cardHeader}>
-            
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
-            <div className={styles.cardHeader}>
-            
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
-            <div className={styles.cardHeader}>
-            
-              <div className={styles.models}>
-                <Scoda  anim = {data.anim}/>
-              </div>
-            </div>
         </Slider>
       </div>
       
       <div className={styles.orderContent}>
-        <div className={styles.comment}>
+        <div className={styles.comment + " col-6"}>
           <h1 className={ 'title40 cl-black'}>
           The exclusive Maserati 
           </h1>
           <p className="title40 cl-yellow">5 500 000 so'm</p>
         </div>
-        <button onClick={()=> dipastch({type: UPDATE_STATE , data: {onModal: !data.onModal}})}  className={styles.titlebtn}>
-          BOOK NOW
-        </button>
+        <div className={"col-6"}>  
+          <button onClick={()=> dipastch({type: UPDATE_STATE , data: {onModal: !data.onModal}})}  className={styles.titlebtn}>
+            BOOK NOW
+            <p>{">"}</p>
+          </button>
+        </div>
        </div>
       </div>
   )
