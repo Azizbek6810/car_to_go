@@ -20,10 +20,13 @@ export default function Navbar(props) {
            <img src="./assets/images/svg/logotip.svg" className={styles.Logo} alt="" />
       </div>
       <div className={styles.redesignMenuRight}>
+        {/* <a className="flex" href="tel: 908888888">
         <div className={styles.icon}>
-           <img src="./assets/images/svg/location.svg" className="Icons" alt="" />
+           <img src="https://crc.uz/wp-content/themes/cityrentcar/images/phone.svg" className="Icons" alt="" />
         </div>
-        <div>
+        <p className="title14 cl-yellow">90 888 88 88 </p>
+        </a> */}
+        <div className={styles.icon + " ml-5"}>
            <img src="./assets/images/svg/steering.svg" className="Icons" alt="" />
         </div>
       </div>
