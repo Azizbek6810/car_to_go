@@ -4,31 +4,29 @@ import {useDispatch, useSelector} from "react-redux";
 import {postOrder} from "../../redux/order/action";
 
 const Ordered = (props)=>{
-    const dispatch = useDispatch()
-    const {orderData} = useSelector(state => state.car)
-    console.log(orderData, 'orderData')
-    const onSubmit =(event)=>{
-        event.preventDefault()
-        dispatch(postOrder({
-            car: event.target[0].value,
-            city: event.target[1].value,
-            from_time: event.target[2].value,
-            to_time: event.target[3].value,
-            phone: "+998978066810",
-            name: "Najim",
-            email: "najim@gmail.com",
-            driver: false,
-            armchair_kids: false
-        }))
-        console.log(event.target[0].value, 'car')
-        console.log(event.target[1].value, 'city')
-        console.log(event.target[2].value, 'from_time')
-        console.log(event.target[3].value, 'to_time')
-    }
+
+    // const onSubmit =(event)=>{
+    //     event.preventDefault()
+    //     dispatch(postOrder({
+    //         car: event.target[0].value,
+    //         city: event.target[1].value,
+    //         from_time: event.target[2].value,
+    //         to_time: event.target[3].value,
+    //         phone: "+998978066810",
+    //         name: "Najim",
+    //         email: "najim@gmail.com",
+    //         driver: false,
+    //         armchair_kids: false
+    //     }))
+    //     console.log(event.target[0].value, 'car')
+    //     console.log(event.target[1].value, 'city')
+    //     console.log(event.target[2].value, 'from_time')
+    //     console.log(event.target[3].value, 'to_time')
+    // }
 
     return(
         <div className={styles.SearchContainer + " " + `${props.inmodal?styles.min: "" }`}>
-         <form onSubmit={onSubmit} className={styles.formAll + " container"}>
+         <form className={styles.formAll + " container"}>
                         <div className="row">
                             <div className="w-100">
                                 <div className={styles.inputRow + " row"}>
