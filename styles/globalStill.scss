@@ -65,4 +65,23 @@
         height: 34px; 
         }
     }
+.ulMenu{
+        display:  flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    
+        &> li{
+        margin: 0;
+        margin-right: 40px;
+        color: var(--shade-1);
+        font-family: var(--family);
+        font-weight: 700;
+        font-size: var(--size14);
+        line-height: 145%;
+        cursor: pointer;
+        }
+    
+    }
     

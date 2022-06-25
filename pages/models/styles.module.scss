@@ -1,4 +1,43 @@
 .models{
     width: 100%;
     background-color: var(--shade-3);
+    .sidebar{
+        width: 25%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        background-color: var(--shade-7);
+        .menu{
+            width: fit-content;
+            min-width: 100%;
+            padding: 30px 0px 30px 0;
+            .titleMenu{
+                padding-left: 15%;
+            }
+            &> ul{
+                width: 100%;
+                flex-direction: column !important;
+                align-items: inherit;
+                &> li{
+                    margin-right: 0 !important;
+                    width: 100%;    
+                    font-size: var(--size20);
+                    padding: 15px 10px 15px 15%;
+                    &:hover{
+                        background-color: rgba(177, 174, 174, 0.5);
+                        -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        width: 75%;
+        min-height: auto;
+        background-color: var(--shade-3);
+        padding: 15px;
+    }
 }
