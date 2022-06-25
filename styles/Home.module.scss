@@ -1,4 +1,3 @@
-@use "./globalStill" as *;
 .home{
 width: 100%;
 height: auto;
@@ -7,9 +6,7 @@ height: auto;
     max-width: 684px;
     margin: 30px auto;
 }
-.titlebtn{
-@include titlebtn;    
-}
+
 
 .AfterTitle{
     width: 100%;

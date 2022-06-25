@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css"
 import '../styles/globals.css'
+import '../styles/globalStill.scss'
 import '../styles/modelCarousel.scss'
 import '../styles/headerCarousel.scss'
 

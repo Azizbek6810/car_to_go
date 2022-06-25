@@ -1,12 +1,12 @@
-@use "../../styles/globalStill" as *;
 
 .rounContent{
-    @include rounContentAll;
+
     left: 60px !important;
     &::before{
         content: "";
-        width: 1vw;
-        height: 1vw;
+        width: .9vw;
+        height: .9vw;
+        
         background-image: url(../../public/assets/images/svg/back.svg);
         background-size: 100% 100%;
         }

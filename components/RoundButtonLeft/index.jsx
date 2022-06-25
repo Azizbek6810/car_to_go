@@ -12,7 +12,7 @@ export default function RoundButtoLeft(props) {
     },[1400])
   }
   return (
-    <div className={ className + " " +  styles.rounContent + " " + `${props.moledSlick ? styles.moledSlickleft : ""}` } 
+    <div className={ className + " rounContentAll " +  styles.rounContent + "  " + `${props.moledSlick ? styles.moledSlickleft : ""}` } 
         onClick={()=>{
           onClick();
           props.moledSlick?

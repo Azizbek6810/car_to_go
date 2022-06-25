@@ -1,8 +1,8 @@
 import styles from "./style.module.scss"
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
-    <div className={styles.navbarContent}>
+    <div className={styles.navbarContent + " "  + ` ${props.dark ? styles.dark : ""}`}>
       <div className={styles.redesignMenuLeft}>
         <ul className={styles.ulMenu}>
           <li>

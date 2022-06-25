@@ -1,16 +1,24 @@
-@use "../../styles/globalStill" as *;
 .rounContent {
-    @include rounContentAll;
-    &::before{
+        &::before{
         content: "";
-        width: 1vw;
-        height: 1vw;
+        width: .9vw;
+        height: .9vw;
         background-image: url(../../public/assets/images/svg/next.svg);
         background-size: 100% 100%;
         }
         @media (max-width: 992px) {
-    .moledSlick{
-            display: block;
-        }
+    
+    }
+}
+.moledSlickleft{
+    display: flex;
+    @media (max-width: 992px) {
+        display: flex;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 3vw;
+        border-radius: 0%;
+        
     }
 }

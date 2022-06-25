@@ -12,7 +12,7 @@ export default function RoundButtonRight(props) {
     },[1400])
   }
   return (
-    <div className={ className + " " +  styles.rounContent + " palalla "  + `${props.moledSlick ? styles.moledSlickright : ""}` }  
+    <div className={ className + " rounContentAll " +  styles.rounContent + "  "  + `${props.moledSlick ? styles.moledSlickright : ""}` }  
     onClick={()=>{
       onClick();
       props.moledSlick? 

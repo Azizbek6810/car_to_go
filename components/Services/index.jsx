@@ -4,11 +4,10 @@ import styles from "./styles.module.scss"
 
 const Services =(props)=>{
      const size =  useWindowSize();
-     console.log(size)
     return(
         <div className={styles.services}>
             {
-                (Number(props.index) + Number(1))%2 === 0 ? <div className="w-100">
+                (Number(props.index) + Number(1))%2 === 0 || size.width < 767 ? <div className="w-100">
                 <div className={styles.imgContents + " col-6"}>
                     <img src="./assets/images/svg/headerImg3.webp" alt="" />
                 </div>
@@ -42,11 +41,8 @@ const Services =(props)=>{
 export default Services
 
 function useWindowSize() {
-    // Initialize state with undefined width/height so server and client renders match
-    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
     const [windowSize, setWindowSize] = useState({
       width: undefined,
-      height: undefined,
     });
   
     useEffect(() => {
@@ -57,7 +53,6 @@ function useWindowSize() {
           // Set window width/height to state
           setWindowSize({
             width: window.innerWidth,
-            height: window.innerHeight,
           });
         }
       

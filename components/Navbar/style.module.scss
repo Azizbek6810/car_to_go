@@ -76,3 +76,10 @@ z-index: 2;
     color: #fff;
 }
 }
+
+.dark{
+    position: static;
+    background-color: rgba(13,13,13,.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}

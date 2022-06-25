@@ -31,6 +31,12 @@
         .title{
             margin-bottom: 15px;
         }
+        .subtitle{
+           padding-right: 30px;
+           @media (max-width: 767px) {
+             width: 75%;
+           }
+        }
     }
     @media (max-width: 767px) {
         .imgContents{

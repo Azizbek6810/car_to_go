@@ -9,10 +9,14 @@ import Vedio from '../components/Vedio'
 import styles from '../styles/Home.module.scss'
 import OrderModal from '../components/OrderModal'
 import Services from '../components/Services'
+import Head from 'next/head'
 export default function Home() {
   
   return (
     <div className={styles.home}>
+      <Head>
+        <title>My page title</title>
+      </Head>
        <Navbar/>
        <Header/>
        <Models  data-aos="fade-up" 
@@ -26,7 +30,7 @@ export default function Home() {
         <h1 className='title40 cl-black'>
         The exclusive Maserati personalization program allows you to create one-of-a-kind Maserati cars, styled by you.
         </h1>
-        <button className={styles.titlebtn}>
+        <button className={"titlebtn"}>
           DISCOVER MORE
           <p>{">"}</p>
         </button>

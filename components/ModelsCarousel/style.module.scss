@@ -1,4 +1,3 @@
-@use "../../styles/globalStill" as *;
 .modelContent{
 width: 100%;
 min-height: 100hv !important;
@@ -102,9 +101,7 @@ top: -5px;
     align-items: center;
     
     .titlebtn{
-        @include titlebtn; 
         width: 80%;
-        height: 54px;
         @media (max-width: 767px) {
             margin-top: 15px;
             width: 60%;
@@ -120,7 +117,7 @@ top: -5px;
             font-weight: 700;
             margin-top: 30px;
             position: absolute;
-            bottom: -15px;
+            bottom: -25px;
             left: 15px;
         }
     }

@@ -1,4 +1,4 @@
-@mixin rounContentAll {
+.rounContentAll {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,6 +18,10 @@
         font-weight: 700;
         content: ">";
         color: #000;
+        max-width: 20px;
+        min-width: 10px;
+        max-height: 20px;
+        min-height: 10px;
         }
     &:hover{
         z-index: 100 !important;
@@ -30,19 +34,18 @@
     }
 }
 
-@mixin  titlebtn{
+.titlebtn{
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-image: linear-gradient(45deg, rgba(255, 200, 68, 1) 0% ,  rgba(255, 200, 68, 1) 100% 0%);
         width: 236px;
-        height: 54px;
         border: none;
         color: #000;
-        font-size: 11px;
+        font-size: var(--size14);
         letter-spacing: 1px;
         line-height: 15px;
-        padding: 22px 36px 22px 21px;
+        padding: calc(0.7vw + 5px )36px calc(0.7vw + 5px) 21px;
         margin-top: 50px;
         text-align: left;
         cursor: pointer;

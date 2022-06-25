@@ -12,6 +12,7 @@ import { UPDATE_STATE } from "../../redux/types/constants";
 export default function Models() {
   const [nav1 , setNav1] = useState(null);
   const [nav2 , setNav2] = useState(null);
+  const [active , setActive] = useState(0);
   const settings1 = {
     infinite: true,
     speed: 1400,
@@ -27,7 +28,11 @@ export default function Models() {
     speed: 1400,
     nextArrow: <RoundButtonRight moledSlick />,
     prevArrow: <RoundButtonLeft moledSlick />,
+    afterChange: current  => setActive(current ),
   };
+  useEffect(()=>{
+    console.log(active);
+  },[active]);
   const state = useSelector((state) => state);
   const data = {
     anim: state.home.animName,
@@ -52,36 +57,18 @@ const dipastch = useDispatch();
           ref= {slider => setNav2(slider)}
           {...settings1}
         >
-          <div className={styles.modeltop + " navbarModel"}>
-            <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/GRECALE_BG.jpg?$1400x2000$&fit=constrain"  className={styles.bgImg + " Img"} alt="" />
-            </div>
-            <h3>Flippen</h3>
-          </div>
-          <div className={styles.modeltop + " navbarModel"}>
-            <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/GH_BG.jpg?$1400x2000$&fit=constrain" className="Img" alt="" />
-            </div>
-            <h3>Ghible</h3>
-          </div>
-          <div className={styles.modeltop + " navbarModel"}>
-          <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/LEV_BG.jpg?$1400x2000$&fit=constrain" className="Img" alt="" />
-            </div>
-            <h3>Kie</h3>
-          </div>
-          <div className={styles.modeltop + " navbarModel"}>
-          <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/QP_BG.jpg?$1400x2000$&fit=constrain" className="Img" alt="" />
-            </div>
-            <h3>Wolsvagen</h3>
-          </div>
-          <div className={styles.modeltop + " navbarModel"}>
-          <div className={styles.madalbg}>
-              <img src="https://maserati.scene7.com/is/image/maserati/maserati/international/HomePage/background-images/MC20_background_1920x1080.jpg?$1400x2000$&fit=constrain" className="Img" alt="" />
-            </div>
-            <h3>Flippen</h3>
-          </div>
+          {
+                data.models.map((value)=>{
+                    return(
+                      <div key={value.id} className={styles.modeltop + " navbarModel"}>
+                        <div className={styles.madalbg}>
+                          <img src={value.imgbg}  className={styles.bgImg + " Img"} alt="" />
+                        </div>
+                        <h3>{value.name}</h3>
+                      </div>
+                    )
+                })
+              }
           
       </Slider>
       <div className={styles.SliderBottom}>
@@ -107,21 +94,21 @@ const dipastch = useDispatch();
             
         </Slider>
       </div>
-      
-      <div className={styles.orderContent}>
-        <div className={styles.comment + " col-6"}>
-          <h1 className={ 'title40 cl-black'}>
-          The exclusive Maserati 
-          </h1>
-          <p className="title40 cl-yellow">5 500 000 so'm</p>
+        
+        <div className={styles.orderContent}>
+          <div className={styles.comment + " col-6"}>
+            <h1 className={ 'title40 cl-black'}>
+              {data.models[active].name} 
+            </h1>
+            <p className="title40 cl-yellow">{data.models[active].cost} so'm</p>
+          </div>
+          <div className={"col-6"}>  
+            <button onClick={()=> dipastch({type: UPDATE_STATE , data: {onModal: !data.onModal , modelId: data.models[active].id }})}  className={styles.titlebtn + " titlebtn"}>
+                BOOK NOW
+              <p>{">"}</p>
+            </button>
+          </div>
         </div>
-        <div className={"col-6"}>  
-          <button onClick={()=> dipastch({type: UPDATE_STATE , data: {onModal: !data.onModal}})}  className={styles.titlebtn}>
-            BOOK NOW
-            <p>{">"}</p>
-          </button>
-        </div>
-       </div>
       </div>
   )
 }
