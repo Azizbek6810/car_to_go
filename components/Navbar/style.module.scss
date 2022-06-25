@@ -1,0 +1,78 @@
+.navbarContent{
+top: 0;
+left: 0;
+position: absolute;    
+width: 100%;
+height: fit-content;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
+z-index: 2;
+// background-color: hsla(0,0%,93.3%,.5);
+// backdrop-filter: blur(10px);
+.redesignMenuLeft
+,.redesignMenuCenter 
+,.redesignMenuRight{
+    width: fit-content;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redesignMenuCenter{
+    width: 96px;
+
+}
+.redesignMenuRight{
+    justify-content: left;
+    .icon{
+        padding-right: 20px;
+    }
+}
+
+.ulMenu{
+    display:  flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &> li{
+    margin: 0;
+    margin-right: 40px;
+    color: var(--shade-1);
+    font-family: var(--family);
+    font-weight: 700;
+    font-size: var(--size14);
+    line-height: 145%;
+    cursor: pointer;
+    }
+
+}
+.Logo{
+    width: 100%;
+    height: fit-content;        
+}
+.titlebtn{
+    display: flex;
+    border: 1px solid #fff;
+    width: 236px;
+    height: 54px;
+    border: none;
+    align-items: center;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding: 22px 36px 22px 21px;
+    margin-top: 50px;
+    text-align: left;
+    cursor: pointer;
+}
+.titlebtn:hover{
+    border: 1px solid #000;
+    background-color: var(--black);
+    color: #fff;
+}
+}
