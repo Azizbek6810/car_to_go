@@ -38,26 +38,35 @@
                         backdrop-filter: blur(10px);
                         color: var(--yellow);
                     }
+                    @media (max-width: 576px){
+                        justify-content: center !important;
+                        padding-left: 10px;
+                    }
                     
                 }
+                @media (max-width: 576px){
+                    display: none;
+                } 
             }
+               
         }
         @media (max-width: 576px) {
             width: 100%;
             align-items: center;
-            position: fixed;
-            top: 0;
-            z-index: 6;
+            min-height: fit-content;
+            min-height: fit-content;
             .menu{
+                height: 0;
+                min-height: 0;
                 .titleMenu{
                     &> ul{
                         &> button{
-                            display: flex;
                             justify-content: center;
                             padding-left: 10px;
                         }
                     }  
                 }
+                padding: 20px !important;
             }
         }
     }
@@ -97,6 +106,9 @@
                     opacity: 0.5;
                 }
             }
+            @media (max-width: 576px) {
+                position: static;
+            }    
         }
         @media (max-width: 576px) {
             width: 100%;
