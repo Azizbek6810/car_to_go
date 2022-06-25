@@ -124,6 +124,9 @@ font-weight: 700;
 .cl-gray{
   color: var(--gray);
 }
+.cl-light{
+  color: var(--shade-4);
+}
 .cl-yellow{
   color: var(--redYellow);
 }
@@ -151,6 +154,7 @@ font-weight: 700;
   --shade-1: #fff;
   --shade-2: #c4c4c4;
   --shade-3: #f2f1f0;
+  --shade-4: #a1a5a8;
   --shade-7: #333333;
   --shade-8: #0D0D0D;
   --blue: #1C3775;

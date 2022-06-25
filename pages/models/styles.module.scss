@@ -1,5 +1,7 @@
 .models{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--shade-3);
     .sidebar{
         width: 25%;
@@ -10,6 +12,8 @@
         justify-content: left;
         background-color: var(--shade-7);
         .menu{
+            position: sticky;
+            top: 20px;
             width: fit-content;
             min-width: 100%;
             padding: 30px 0px 30px 0;
@@ -20,16 +24,39 @@
                 width: 100%;
                 flex-direction: column !important;
                 align-items: inherit;
-                &> li{
-                    margin-right: 0 !important;
+                &> button{
+                    background-image: none;
+                    background-color: transparent;
+                    margin-top: 0 !important;
                     width: 100%;    
                     font-size: var(--size20);
-                    padding: 15px 10px 15px 15%;
-                    &:hover{
+                    padding: 25px 10px 25px 15%;
+                    color: var(--shade-1);
+                    &:focus {
                         background-color: rgba(177, 174, 174, 0.5);
                         -webkit-backdrop-filter: blur(10px);
                         backdrop-filter: blur(10px);
+                        color: var(--yellow);
                     }
+                    
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            width: 100%;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 6;
+            .menu{
+                .titleMenu{
+                    &> ul{
+                        &> button{
+                            display: flex;
+                            justify-content: center;
+                            padding-left: 10px;
+                        }
+                    }  
                 }
             }
         }
@@ -39,5 +66,40 @@
         min-height: auto;
         background-color: var(--shade-3);
         padding: 15px;
+        padding-top: 0;
+        .Allfiltr{
+            position: sticky;
+            top: -1px;
+            width: 100%;
+            z-index: 6;
+            background-color: var(--shade-3);
+            height: fit-content;
+            padding: 15px 0 25px 0 ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &> ul{
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-around ;
+            }
+            .btn{
+                width: fit-content;
+                margin: 10px 10px;
+                text-align: center;
+                padding-right: 21px;
+                background-color: var(--shade-7);
+                margin-top: 0;
+                background-image: none;
+                color: var(--shade-1);
+                &:focus {
+                    transform: scale(0.95);
+                    opacity: 0.5;
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            width: 100%;
+        }
     }
 }

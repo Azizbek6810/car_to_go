@@ -1,5 +1,5 @@
 import { Cars } from "../../utils/cars";
-import { UPDATE_Data, UPDATE_STATE, UPDAT_EDELETE } from "../types/constants"
+import {  UPDATE_STATE} from "../types/constants"
 
 
 

@@ -16,16 +16,67 @@ const Models=()=>{
                         </div>
                         <div className={styles.menu}>
                             <ul className="ulMenu"> 
-                                <li>Kia</li>
-                                <li>XPeng</li>
-                                <li>Mercedes Benz</li>
-                                <li>Chevrolet</li>
-                                <li>Skoda</li>
+                                <button className="titlebtn">All</button>
+                                <button className="titlebtn">Kia</button>
+                                <button className="titlebtn">XPeng</button>
+                                <button className="titlebtn">Mercedes Benz</button>
+                                <button className="titlebtn">Chevrolet</button>
+                                <button className="titlebtn">Skoda</button>
                             </ul>
                         </div>
                     </div>  
                 </div>
                 <div className={styles.main}>
+                    <div className={styles.Allfiltr}>
+                        <ul className="ulMenu">
+                            <button className={ " titlebtn " + styles.btn }>
+                                4 x 4
+                            </button>
+                            <button className={ " titlebtn " + styles.btn }>
+                            Biznes 
+                            </button>
+                            <button className={ " titlebtn " + styles.btn }>
+                            Premium
+                            </button>
+                            <button className={ " titlebtn " + styles.btn }>
+                            Standart
+                            </button>
+                            <button className={ " titlebtn " + styles.btn }>
+                            Economy							
+                            </button>
+                            <button className={ " titlebtn " + styles.btn }>
+                            Electro							
+                            </button>
+
+                        </ul>
+                    </div>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
+                    <ModelCard/>
                     <ModelCard/>
                 </div>
         </div>
